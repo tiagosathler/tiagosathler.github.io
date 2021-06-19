@@ -76,6 +76,12 @@ body {
     padding-top: 30px;
 }
 
+.network-section a {
+    display:inline-block;
+    vertical-align: middle;
+    
+}
+
 p {
     padding: 2px;
 }
