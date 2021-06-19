@@ -9,6 +9,7 @@
 }
 
 body {
+   
     
 }
 
@@ -25,7 +26,7 @@ h1 {
     font-size: 48px;
     font-weight: 600;
     text-shadow: 4px 4px 4px #70707069;
-    text
+    text-align: center;
 
 }
 
@@ -33,5 +34,4 @@ h2 {
     color: #c29399;
     font-size: 32px;
     text-shadow: 2px 2px 2px #1f4558;
-
 }
