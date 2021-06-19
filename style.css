@@ -5,21 +5,18 @@
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     background-color: #dde6f7;
     color: #020814;
-    margin: 0;
-    padding: 0;
-}
+}   
 
-body {
-   
+body {   
     
 }
 
-.buttons {
-    margin: 50px;
+.buttons-div {
+    margin: 10px;
     text-align: center;    
 }
 
-.buttons a {
+.buttons-div a {
     text-decoration: none;
     background-color: #1f4558;
     color: white;
@@ -31,8 +28,8 @@ body {
     font-weight: 600;
     font-size: 18px;
     line-height: 24px;
-    padding: 15px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px;
     position: relative;
     box-sizing: border-box;
     cursor: pointer;
@@ -54,27 +51,31 @@ body {
     text-decoration: underline;
 }
 
+.titulo {
+    margin: auto;
+    padding: 50px;
+    color: #1f4558;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 4px 4px 4px #70707069;
+    text-align: center;
+}
+
 #foto {
     border-radius: 50%;
     box-shadow:  10px 0px 10px 1px rgba(100, 100, 100, 0.76);
     display: block;
     margin: auto;
-    
-    
-
 }
 
-h1 {
-    color: #1f4558;
-    font-size: 48px;
-    font-weight: 600;
-    text-shadow: 4px 4px 4px #70707069;
-    text-align: center;
-
-}
-
-h2 {
+.subtitulo {
     color: #c29399;
     font-size: 32px;
     text-shadow: 2px 2px 2px #1f4558;
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+p {
+    padding: 2px;
 }
