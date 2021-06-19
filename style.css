@@ -76,12 +76,14 @@ body {
     padding-top: 30px;
 }
 
-.network-section a {
-    display:inline-block;
+.network-icon {
     vertical-align: middle;
-    
-}
+}    
 
 p {
     padding: 2px;
+}
+
+.footer-section {
+    text-align: right;
 }
