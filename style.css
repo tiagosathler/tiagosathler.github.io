@@ -3,6 +3,9 @@
 
 * {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    background-color: #dde6f7;
+    color: #020814;
+    margin: 0;
 }
 
 body {
@@ -11,4 +14,24 @@ body {
 
 #foto {
     border-radius: 50%;
+    box-shadow:  10px 0px 10px 1px rgba(100, 100, 100, 0.76);
+    display: block;
+    
+
+}
+
+h1 {
+    color: #1f4558;
+    font-size: 48px;
+    font-weight: 600;
+    text-shadow: 4px 4px 4px #70707069;
+    text
+
+}
+
+h2 {
+    color: #c29399;
+    font-size: 32px;
+    text-shadow: 2px 2px 2px #1f4558;
+
 }
