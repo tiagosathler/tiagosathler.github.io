@@ -6,6 +6,7 @@
     background-color: #dde6f7;
     color: #020814;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -13,10 +14,52 @@ body {
     
 }
 
+.buttons {
+    margin: 50px;
+    text-align: center;    
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #1f4558;
+    color: white;
+}
+
+.button-header {
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 15px;
+    margin: 10px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 400ms ease;    
+    border-radius: 10px;
+}
+
+.button-effects {
+    background-color: #1f4558;
+}
+
+.button-effects:hover {
+    background-color: #c29399;    
+}
+
+.button-effects:hover a {
+    background-color: #c29399;
+    color: #1f4558;
+    text-decoration: underline;
+}
+
 #foto {
     border-radius: 50%;
     box-shadow:  10px 0px 10px 1px rgba(100, 100, 100, 0.76);
     display: block;
+    margin: auto;
+    
     
 
 }
