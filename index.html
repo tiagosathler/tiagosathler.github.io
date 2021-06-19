@@ -1,48 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Portfólio de Tiago Sathler</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	
+	<title>Portfólio de Tiago Sathler</title>
 </head>
+
 <body>
-    <ul>
-        <li><a href="#foto">Minha foto</a></li>
-        <li><a href="#sobre">Sobre mim</a></li>
-        <li><a href="#habilidades">Algumas habilidades</a></li>
-        <li><a href="#links">Minhas redes</a></li>
-    </ul>
+	<div class="buttons-div">
+		<button type="button" class="button-header button-effects">
+				<a class=link-header href="#foto">Minha foto</a>			
+		</button>
+		<button type="button" class="button-header button-effects">
+			<a class=link-header href="#sobre">Sobre mim</a>			
+		</button>
+		<button type="button" class="button-header button-effects">
+			<a class=link-header href="#habilidades">Algumas habilidades</a>			
+		</button>
+		<button type="button" class="button-header button-effects">
+			<a class=link-header href="#links">Minhas redes</a>			
+		</button>
+	</div>
 
-    <hr>
+	<div class="photo-div">
+		<h1 class="titulo">Tiago Heringer Siqueira Sathler</h1>
+		<img id="foto" src="foto.JPG" alt="Minha foto" width="300px">
+	</div>
 
-    <h1>Tiago Heringer Siqueira Sathler</h1>
-    <img id="foto" src="foto.JPG" alt="Minha foto" width="500px">
-    
-    <h2 id="sobre">Sobre mim</h2>
-    <p>Sou mineiro de uma cidade perdida no leste de <em>Minas Gerais</em>, chamada <em><a href="https://goo.gl/maps/DebkomfY3KbV7QhW9" target="_blank">Alto Jequitibá</a></em>, próximo da divisa com o Espírito Santo e do <a href="https://www.icmbio.gov.br/parnacaparao/guia-do-visitante.html" target="_blank"><em>Parque Nacional do Caparaó</em></a>.</p>
-    <p>Já passei dos 40 anos (!), sou formado em Engenharia Elétrica pela <a href="https://ufmg.br/" target="_blank">UFMG</a> e trabalhei na área de mineração durante alguns anos e agora decidi <em><strong>mudar totalmente de área</strong></em>, voltando para as minhas origins da computação.</p>
-    <p><strong>Tenho grandes expectativas</strong> na <strong>Trybe</strong> e estou adorando aprender novas coisas junto com outras pessoas de diversos lugares. A <strong><a href="https://www.betrybe.com/" target="_blank">Trybe</a></strong> tem um time incrível!</p>
-    <p>Sou da Turma 14 - Tribo A na Trybe desde Junho / 2021.</p>
-    
-    <h2 id="habilidades">Algumas habilidades</h2>
-    <ul>
-        <li>Já programei em Assembly e C há muito tempo atrás...</li>
-        <li>Gosto de eletrônica e já brinquei com microcontroladores</li>
-        <li>Adoro correr e sonho participar de uma maratona</li>
-        <li>Sei planejar bem minhas atividades</li>
-        <li><strong>Gosto de ajudar as pessoas e aprender com elas</strong></li>
-    </ul>
-    
-    <h2 id="links">Minhas redes</h2>
-    <ul>
-        <li><img src="Linkedin-icon.png" alt="Linkedin icon"><a href="https://www.linkedin.com/in/tiagosathler/" target="_blank">LinkedIn (tiagosathler)</a><img></li>
-        <li><img src="github-logo-black-and-white.png" alt="Github icon"><a href="https://github.com/tiagosathler" target="_blank">GitHub (tiagosathler)</a></img></li>
-    </ul>
+	<div class="about-div">
+		<h2 id="sobre" class="subtitulo">Sobre mim</h2>
+		<p>
+			Sou mineiro de uma cidade perdida no leste de <em>Minas Gerais</em>, chamada 
+			<em><a href="https://goo.gl/maps/DebkomfY3KbV7QhW9" target="_blank">Alto Jequitibá</a></em>, 
+			próximo da divisa com o Espírito Santo e do 
+			<a href="https://www.icmbio.gov.br/parnacaparao/guia-do-visitante.html"
+				target="_blank"><em>Parque Nacional do Caparaó</em></a>.
+			</p>
+		<p>
+			Já passei dos 40 anos (!), sou formado em Engenharia Elétrica pela 
+			<a href="https://ufmg.br/" target="_blank">UFMG</a> e trabalhei na área de mineração durante alguns anos e agora decidi
+			<em><strong>mudar totalmente de área</strong></em>, voltando para as minhas origins na computação.
+		</p>
+		<p>
+			<strong>Tenho grandes expectativas</strong> na <strong>Trybe</strong> e estou adorando aprender novas coisas
+			junto com outras pessoas de diversos lugares. A <strong><a href="https://www.betrybe.com/"
+					target="_blank">Trybe</a></strong> tem um time incrível!
+		</p>
+		<p>
+			Sou da Turma 14 - Tribo A na Trybe desde Junho / 2021.
+		</p>
+	</div>
 
-    <hr>
+	<div class="habilities-div">
+		<h2 id="habilidades" class="subtitulo">Algumas habilidades</h2>
+		<p>
+			Estou aprendendo muitas habilidades novas e vou atualizá-las aqui com o passar do tempo. Enquanto isso veja algumas habilidades:
+		</p>
+		<ul>
+			<li>Programei em Assembly e C há muito tempo atrás...</li>
+			<li>Gosto de eletrônica e já brinquei com microcontroladores</li>
+			<li>Sei planejar bem minhas atividades</li>
+			<li>HTML e CSS básico e um pouco de Javascript (estou aprendendo mais!)</li>
+			<li><strong>Gosto de ajudar as pessoas e aprender com elas</strong></li>
+		</ul>
+	</div>
 
-    <footer>Feito com muito carinho &#x1F49A</footer>
+	<div class="network-div">
+		<h2 id="links" class="subtitulo">Minhas redes</h2>
+		<ul>
+			<li>
+				<a href="https://www.linkedin.com/in/tiagosathler/" target="_blank">
+					<img class="network-icon" src="linkedin-icon-black-48px.png" alt="Linkedin icon">
+					LinkedIn (tiagosathler)
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/tiagosathler" target="_blank">
+					<img class="network-icon" src="github-icon-black-48px.png" alt="Github icon">
+					GitHub (tiagosathler)
+					</a>
+			</li>
+			<li>
+				<a href="mailto:sathler@gmail.com" target="_blank">
+					<img class="network-icon" src="email_icon_48px.png" alt="Email icon">
+					sathler@gmail.com
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<footer class="footer-section">
+		<hr>
+		Feito com muito carinho &#x1F49A
+	</footer>
 </body>
 </html>
