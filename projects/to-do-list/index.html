@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Projeto Minha Lista de Tarefas</title>
+</head>
+<body>  
+  <section id="corpo">    
+    <div id="board">
+      <div id="inicio">
+        <header id="title">Minha Lista de Tarefas</header>
+        <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>       
+        <label for="texto-tarefa"></label>
+        <input type="text" name="texto-tarefa" id="texto-tarefa" autocomplete="on" spellcheck="true" maxlength="100" placeholder="Insira sua tarefa" autofocus>
+        <button type="button" id="criar-tarefa"><img src="imagens/add-button.png" alt="add-button" title="Adiciona tarefa"></button>
+      </div>
+      <div id=centro>
+        <div id="tela">
+          <ol id="lista-tarefas"></ol>
+        </div>
+        <div id="controle-item">
+          <button type="button" id="mover-cima"><img src="imagens/up-button.png" alt="up-button" title="Move pra cima"></button><br>
+          <button type="button" id="remover-finalizados"><img src="imagens/done-button.png" alt="done-button" title="Remove tarefas concluídas"></button>
+          <button type="button" id="remover-selecionado"><img src="imagens/remove-button.png" alt="remove-button" title="Remove tarefa"></button><br>
+          <button type="button" id="mover-baixo"><img src="imagens/down-button.png" alt="down-button" title="Move pra baixo"></button>
+        </div>
+      </div>
+      <div id="controle-geral">
+        <button type="button" id="salvar-tarefas"><img src="imagens/save-button.png" alt="save-button" title="Salve a lista"></button>
+        <button type="button" id="apaga-tudo"><img src="imagens/trash.png" alt="trash" title="Apaga a lista!"></button>
+      </div>
+    </div>        
+  </section>  
+  <script src="script.js"></script>
+</body>
+</html>
