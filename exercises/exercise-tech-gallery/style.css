@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #323433;
+  color: #e9eae8;
+}
+
+.first-section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em 0;
+  color: #323433;
+}
+
+.second-section {
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 550px;
+  margin: auto;  
+}
+
+.second-section div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 207px;
+  width: 170px;
+  margin: 0.3em;
+  border-radius: 0.9em;
+  box-shadow: 0.15em 0.15em #d2d2d2;
+  background-color: #f1f1f1;
+  color: #5e647a;
+}
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  padding: 0.8em 0;
+  border-top: 0.1em solid #bcbcbb;
+}
