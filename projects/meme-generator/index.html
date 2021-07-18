@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+  <title>Projeto Meme Generator</title>
+</head>
+<body>
+    <h1>MEME GENERATOR</h1>
+
+    <label for="text-input">Texto:</label>
+    <input type="text" name="text-input" id="text-input" autocomplete="on" placeholder="Escreva uma frase!" autofocus maxlength="60">
+    <label for="meme-insert">Foto:</label>
+    <input type="file" accept="image/*" name="meme-insert" id="meme-insert">
+   
+    <figure id="meme-image-container">
+      <img src="#" id="meme-image" alt="img source">
+      <figcaption id="meme-text"></p>
+    </figure>
+    
+    <div>
+      <p>Estilos de borda customizados:</p>
+      <button id="fire" class="buttons-style" title="Fire"><img src="imgs/fire-button.png" alt="fire-button"></button>
+      <button id="water" class="buttons-style" title="Water"><img src="imgs/water-button.png" alt="water-button"></button>
+      <button id="earth" class="buttons-style" title="Earth"><img src="imgs/ground-button.png" alt="ground-button"></button>
+    </div>
+
+    <div>
+      <p>Memes pré-prontos:</p>
+      <img id="meme-1" class="memes-famosos" src="imgs/meme1.png" alt="noun_derp" width="60px" height="60px">
+      <img id="meme-2" class="memes-famosos" src="imgs/meme2.png" alt="noun_Jackie" width="60px" height="60px">
+      <img id="meme-3" class="memes-famosos" src="imgs/meme3.png" alt="noun_Why" width="60px" height="60px">
+      <img id="meme-4" class="memes-famosos" src="imgs/meme4.png" alt="noun_Yao" width="60px" height="60px">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
