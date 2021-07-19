@@ -2,23 +2,20 @@
 // PROJECT PIXELS ART
 // TIAGO SATHLER - TURMA 14 - B
 // 08/07/21
+// 18/07/21 - Contribuição por code review de 'pauloeduardods' (Paulo de Sordi - 14A)
 // ////////////////////////////////////////////
 
 function createPixel(element) {
   const pixelElement = document.createElement('div');
   pixelElement.className = 'pixel';
-  pixelElement.style.backgroundColor = 'white';
   element.appendChild(pixelElement);
 }
 
-function createBoard(n) {
-  const pixelBoard = document.querySelector('#pixel-board');
-  pixelBoard.style.margin = 'auto';
-  pixelBoard.className = 'table';
+function createBoard(n, board) {
   for (let row = 0; row < n; row += 1) {
     const rowElement = document.createElement('div');
     rowElement.className = 'tr';
-    pixelBoard.appendChild(rowElement);
+    board.appendChild(rowElement);
     for (let column = 0; column < n; column += 1) {
       createPixel(rowElement);
     }
@@ -31,38 +28,18 @@ function setColorItem(element, color) {
 }
 
 function selectItem(element) {
-  document.querySelectorAll('.color').forEach((colorElement) => {
-    colorElement.classList.remove('selected');
-  });
+  document.querySelector('.selected').classList.remove('selected');
   element.target.classList.add('selected');
 }
 
-function getColorSelected(palette) {
-  let color = false;
-  for (let i = 0; i < palette.length; i += 1) {
-    if (palette[i].classList.contains('selected')) {
-      color = palette[i].style.backgroundColor;
-    }
-  }
-  return color;
-}
-
 function paintingPixel(element) {
-  const color = getColorSelected(document.querySelectorAll('.color'));
-  if (color !== false) {
-    setColorItem(element.target, color);
-  }
+  const color = document.querySelector('.selected').style.backgroundColor;
+  setColorItem(element.target, color);
 }
 
 function clearBoard() {
   document.querySelectorAll('.pixel').forEach((pixel) => {
     setColorItem(pixel, 'white');
-  });
-}
-
-function deleteBoard() {
-  document.querySelectorAll('.pixel').forEach((element) => {
-    element.remove();
   });
 }
 
@@ -81,15 +58,13 @@ function testBoardNumber(number) {
 }
 
 function generateNewBoard() {
+  const newBoard = document.querySelector('#pixel-board');
   let number = document.querySelector('#board-size').value;
   number = testBoardNumber(number);
   if (number) {
-    deleteBoard();
-    createBoard(number);
-    document.querySelectorAll('.pixel').forEach((pixelElement) => {
-      pixelElement.addEventListener('click', paintingPixel);
-      setColorItem(pixelElement, 'white');
-    });
+    newBoard.innerHTML = '';
+    createBoard(number, newBoard);
+    newBoard.addEventListener('click', paintingPixel);
   }
 }
 
@@ -115,7 +90,8 @@ function generatePalette() {
 
 function initiate() {
   const n = 5;
-  createBoard(n);
+  const board = document.querySelector('#pixel-board');
+  createBoard(n, board);
   generatePalette();
   document.querySelector('.color1').classList.add('selected');
   document.querySelectorAll('.color').forEach((colorElement) => {
