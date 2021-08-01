@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trybewarts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+      <img src="images/trybewarts-header-logo.svg" alt="trybewarts-header-logo" class="trybewarts-header-logo">
+      <h1 id="trybewarts-header-title">Trybewarts</h1>
+      <form action="" class="trybewarts-login">
+        <input type="email" placeholder="Login" id="login">
+        <input type="password" placeholder="Senha" id="password">
+        <button type="submit" id="btn-login">Acessar</button>
+    </form>
+    </header>
+    <main>
+        <form action="" id="evaluation-form">
+            
+          <div class="row">
+            <label for="nome">
+              <input type="text" name="nome" id="input-name" placeholder="Nome">
+            </label>
+            <label for="sobrenome">
+              <input type="text" name="sobrenome" id="input-lastname" placeholder="Sobrenome">
+          </div>
+          <div class="row">
+            </label>
+            <label for="email">
+              <input type="email" name="email" id="input-email" placeholder="Email">
+            </label>
+              <label for="house">Casa:</label>
+              <select name="house" id="house">
+                <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+                <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+                <option value="Corvinode" id="corvinode-house">Corvinode</option>
+                <option value="Pytherina" id="pytherina-house">Pytherina</option>
+            </select>
+            </div>
+            
+            
+
+          </div>
+
+          <!-- requisito 12 -->
+          <div class="row">
+            <fieldset class="family-field">
+              <legend id="label-family">Qual sua família?</legend>
+              <label for="frontend" class="label-family row">
+                <input type="radio" name="family" id="frontend" value="Frontend" class="input-family">
+                Família Frontend
+              </label>
+              <label for="backend" class="label-family row">
+                <input type="radio" name="family" id="backend" value="Backend" class="input-family">
+                Família Backend
+              </label>
+              <label for="fullstack" class="label-family row">
+                <input type="radio" name="family" id="fullstack" value="FullStack" class="input-family">
+                Família FullStack
+              </label>
+            </fieldset>
+          </div>
+
+          <div>
+            <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+            <div id="checkboxBtn">
+              <label for="hofs">
+                <input type="checkbox" name="materia" id="hofs" value="HoFs" class="subject">
+                HoFs
+              </label>
+              <label for="jest">
+                <input type="checkbox" name="materia" value="Jest" id="jest" class="subject">
+                Jest
+              </label>
+              <label for="promises">
+                <input type="checkbox" name="materia" value="Promises" id="promises" class="subject">
+                Promises
+              </label>
+              <label for="react">
+                <input type="checkbox" name="materia" value="React" id="react" class="subject">
+                React
+              </label>
+              <label for="sql">
+                <input type="checkbox" name="materia" value="SQL" id="sql" class="subject">
+                SQL
+              </label>
+              <label for="python">
+                <input type="checkbox" name="materia" value="Python" id="python" class="subject">
+                Python
+              </label>
+            </div>
+        </div>
+          <!-- requisito 14: -->
+          <fieldset class="row">
+            <label id="label-rate">
+              Como você avalia a Trybewarts?        
+            </label>
+            <label for="rate01">
+              <input type="radio" id="rate01" name="rate" class="evaluate-input" value="1">
+              1
+            </label>
+            <label for="rate02">
+              <input type="radio" id="rate02" name="rate" class="evaluate-input" value="2">
+              2
+            </label>
+            <label for="rate03">
+              <input type="radio" id="rate03" name="rate" class="evaluate-input" value="3">
+              3
+            </label>
+            <label for="rate04">
+              <input type="radio" id="rate04" name="rate" class="evaluate-input" value="4">
+              4
+            </label>
+            <label for="rate05">
+              <input type="radio" id="rate05" name="rate" class="evaluate-input" value="5">
+              5
+            </label>
+            <label for="rate06">
+              <input type="radio" id="rate06" name="rate" class="evaluate-input" value="6">
+              6
+            </label>
+            <label for="rate07">
+              <input type="radio" id="rate07" name="rate" class="evaluate-input" value="7">
+              7
+            </label>
+            <label for="rate08">
+              <input type="radio" id="rate08" name="rate" class="evaluate-input" value="8">
+              8
+            </label>
+            <label for="rate09">
+              <input type="radio" id="rate09" name="rate" class="evaluate-input" value="9">
+              9
+            </label>
+            <label for="rate10">
+              <input type="radio" id="rate10" name="rate" class="evaluate-input" value="10">
+              10
+            </label>
+          </fieldset>
+          <div class="row">
+              <label for="textarea" class="textarea row">Deixe seu comentário:</label>
+              <textarea name="review" id="textarea" cols="30" rows="10" maxlength="500" class="row"></textarea>              
+              <div id="counter">500</div>
+          </div>
+          <!-- requisito 16: -->
+          <fieldset class="row">
+            <label for="agreement" id="label-infos">
+              Você concorda com o uso das informações acima?
+              <input type="checkbox" name="agreement" id="agreement" class="subject">
+            </label>
+          </fieldset>
+         <button type="submit" id="submit-btn" disabled>Enviar</button>
+        </form>
+        <img src="images/trybewarts-colored.svg" alt="" id="trybewarts-forms-logo">
+    </main> 
+    <footer>Direitos reservados à Trybewarts©</footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
