@@ -4,6 +4,7 @@
 // 09/06/21
 // 18/07/21 - Contribuição por code review de 'pauloeduardods' - Paulo Sordi 14A
 // //////////////////////////////////////////////
+const listaTarefas = document.querySelector('#lista-tarefas');
 
 function singleClickItem(element) {
   if (document.querySelector('.selected') !== null) {
@@ -21,22 +22,23 @@ function doubleClickItem(element) {
   }
 }
 
-function addTask(listaTarefas) {
+function addTask() {
   const taskLiItem = document.createElement('li');
   const inputForm = document.querySelector('#texto-tarefa');
   if (inputForm.value !== '') {
     taskLiItem.innerText = inputForm.value;
     taskLiItem.classList.add('task');
     inputForm.value = '';
+    taskLiItem.addEventListener('click', singleClickItem, false);
+    taskLiItem.addEventListener('dblclick', doubleClickItem, false);
     listaTarefas.appendChild(taskLiItem);
   } else {
     window.alert('Digite uma tarefa!');
   }
 }
 
-function clearAllTasks(listaTarefas) {
-  const element = listaTarefas;
-  element.innerHTML = '';
+function clearAllTasks() {
+  listaTarefas.innerHTML = '';
 }
 
 function clearCompletedTasks() {
@@ -45,16 +47,18 @@ function clearCompletedTasks() {
   });
 }
 
-function saveTaskList(listaTarefas) {
+function saveTaskList() {
   localStorage.clear();
-  const listaContent = listaTarefas.innerHTML;
-  localStorage.setItem('ol-content', listaContent);
+  localStorage.setItem('ol-content', listaTarefas.innerHTML);
 }
 
-function populateListFromStorage(listaTarefas) {
+function populateListFromStorage() {
   const listaContent = localStorage.getItem('ol-content');
-  const element = listaTarefas;
-  element.innerHTML = listaContent;
+  listaTarefas.innerHTML = listaContent;
+  listaTarefas.childNodes.forEach((li) => {
+    li.addEventListener('click', singleClickItem, false);
+    li.addEventListener('dblclick', doubleClickItem, false);
+  });
 }
 
 function moveItemUp() {
@@ -62,8 +66,7 @@ function moveItemUp() {
   if (elementToUp) {
     if (elementToUp.previousElementSibling) {
       const elementPreviousSibling = elementToUp.previousElementSibling;
-      const elementParent = elementToUp.parentElement;
-      elementParent.insertBefore(elementToUp, elementPreviousSibling);
+      listaTarefas.insertBefore(elementToUp, elementPreviousSibling);
     }
   } else {
     window.alert('Selecione uma tarefa antes de mover');
@@ -75,8 +78,7 @@ function moveItemDown() {
   if (elementToDown) {
     if (elementToDown.nextElementSibling) {
       const elementNextSibling = elementToDown.nextElementSibling;
-      const elementParent = elementToDown.parentElement;
-      elementParent.insertBefore(elementToDown, elementNextSibling.nextElementSibling);
+      listaTarefas.insertBefore(elementToDown, elementNextSibling.nextElementSibling);
     }
   } else {
     window.alert('Selecione uma tarefa antes de mover');
@@ -86,30 +88,26 @@ function moveItemDown() {
 function removeTask() {
   const elementToRemove = document.querySelector('.selected');
   if (elementToRemove) {
-    const elementParent = elementToRemove.parentElement;
-    elementParent.removeChild(elementToRemove);
+    elementToRemove.remove();
   } else {
     window.alert('Selecione uma tarefa antes de remover');
   }
 }
 
 function initiate() {
-  const listaTarefas = document.querySelector('#lista-tarefas');
   document.querySelector('#criar-tarefa')
-    .addEventListener('click', addTask.bind(null, listaTarefas), false);
-  listaTarefas.addEventListener('click', singleClickItem, false);
-  listaTarefas.addEventListener('dblclick', doubleClickItem, false);
+    .addEventListener('click', addTask, false);
   document.querySelector('#apaga-tudo')
-    .addEventListener('click', clearAllTasks.bind(null, listaTarefas), false);
+    .addEventListener('click', clearAllTasks, false);
   document.querySelector('#remover-finalizados')
     .addEventListener('click', clearCompletedTasks, false);
   document.querySelector('#salvar-tarefas')
-    .addEventListener('click', saveTaskList.bind(null, listaTarefas), false);
+    .addEventListener('click', saveTaskList, false);
   document.querySelector('#mover-cima').addEventListener('click', moveItemUp, false);
   document.querySelector('#mover-baixo').addEventListener('click', moveItemDown, false);
   document.querySelector('#remover-selecionado').addEventListener('click', removeTask, false);
   if (localStorage.length > 0) {
-    populateListFromStorage(listaTarefas);
+    populateListFromStorage();
   }
 }
 
