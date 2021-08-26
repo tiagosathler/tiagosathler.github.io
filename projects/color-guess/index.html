@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Advinhe a Cor</title>
+</head>
+
+<body>
+  <main>
+    <section id="content">
+      <h1 id="title">Adivinhe a cor!</h1>
+      <label for="amount">Quantidade:
+        <input type="number" value="6" id="amount" min="2" max="10" autofocus></label>
+      <h2 id="rgb-color"></h2>
+      <h3>Placar: <span id="score">0</span></h3>
+      <section id="balls">
+      </section>
+      <h2 id="answer"></h2>
+      <input type="button" value="Zerar placar" id="reset-score" class="ctrl-btn">
+      <input type="button" value="Sortear cores" id="reset-game" class="ctrl-btn">
+    </section>
+  </main>
+</body>
+<script src="script.js"></script>
+
+</html>
